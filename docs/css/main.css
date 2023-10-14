@@ -1,0 +1,334 @@
+:root {
+    --background-color: #F2F2F2;
+    --link-color: #3D7BF3;
+    --primary-color: #333333;
+    --secondary-color: #FFFFFF;
+    --accent-color: rgba(61, 123, 243, 0.1);
+    --testimonial-color: rgba(239, 239, 239, 1);
+    --text-color: rgba(123, 123, 123, 1);
+
+    /* Fonts */
+    --font-primary: 'Roboto', sans-serif;
+    --font-secondary: 'Quicks', sans-serif;
+
+    /* Font Sizes */
+    --base-font-size: 1rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+}
+
+/* Base Element Styles */
+body {
+    background: var(--background-color);
+    color: var(--base-font-size) / 1.6 var(--font-primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    text-transform: capitalize;
+}
+
+a {
+    font-family: var(--font-primary);
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Layout Styles */
+.site {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    line-height: 2rem;
+    align-items: center;
+    font-size: 1.25rem;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    gap: 33px;
+}
+
+.menu-item {
+    text-align: right;
+}
+
+/* Section Styles */
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #FFFFFF;
+    background-repeat: no-repeat;
+    height: calc(50vh - 5rem);
+    margin-bottom: 5rem;
+}
+
+.section.task {
+    background-image: url('./images/task.png');
+    justify-content: flex-end;
+    text-align: right;
+    height: 450px;
+}
+
+.section.clip {
+    background-image: url('./images/clip.png');
+    background-position: right;
+    justify-content: flex-start;
+    text-align: left;
+    height: 390px;
+}
+
+.hero-content {
+    width: 50rem;
+}
+
+.hero {
+    display: flex;
+    height: 32rem;
+    background-color: var(--primary-color);
+    align-items: top;
+    margin-bottom: 5rem;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.pill-link-black-button a {
+    display: inline-block;
+    padding: 5px 25px;
+    border-radius: 50px;
+    background-color: var(--secondary-color);
+    color: var(--link-color);
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pill-link-black-button:hover {
+    background-color: var(--accent-color);
+}
+
+.hero.center.ready {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero.center .hero-content {
+    text-align: center;
+}
+
+.hero.center .hero-content h1, h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero.center .hero-content p, h3 {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.hero.center .hero-content .pill-link-black-button,
+.hero.center .hero-content a {
+    background-color: var(--accent-color);
+}
+
+/* Form Styles */
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.column.flex {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.column.form input[type="email"],
+.column.form input[type="submit"] {
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.column.form input[type="submit"] {
+    background-color: var(--primary-color);
+    color: #FFF;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.column.form input[type="submit"]:hover {
+    background-color: var(--accent-color);
+}
+
+.circular-image {
+    border-radius: 50%;
+    width: 110px;
+    height: 110px;
+}
+
+/* Testimonials Styles */
+.testimonials-header {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.testimonials-header h2 {
+    margin-bottom: 10px;
+}
+
+.testimonials-header p {
+    font-size: 1.25rem;
+    color: #999;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.testimonial {
+    border: 1px solid #D9D9D9;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-basis: calc(33.33% - 20px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.testimonial .circular-image {
+    position: absolute;
+    top: -40px;
+}
+
+.testimonial-color-1 {
+    background-color: var(--testimonial-color1);
+}
+
+.testimonial-color-2 {
+    background-color: var(--testimonial-color2);
+}
+
+.pill-link {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    color: #FFF;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pill-link:hover {
+    background-color: var(--accent-color);
+}
+
+.pill-tall-link {
+    background-color: #FFF;
+    border: 2px solid 10px;
+    border-radius: 25px;
+    padding: 15px 25px;
+    background: rgba(214, 214, 214, 0.6);
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero h1 {
+        font-size: calc(var(--h1-font-size) * 0.75);
+    }
+
+    .sub-text {
+        width: 80%;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .column {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero .bg {
+        background-image: none;
+    }
+
+    .hero h1 {
+        font-size: calc(var(--h1-font-size) * 0.5);
+    }
+
+    .sub-text {
+        width: 60%;
+    }
+
+    .hero-section.task {
+        background-image: none;
+    }
+
+    .testimonial-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial {
+        margin-top: 5rem;
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        padding: 0 20px;
+    }
+
+    .hero h1 {
+        font-size: calc(var(--h1-font-size) * 0.4);
+    }
+
+    .sub-text {
+        width: 100%;
+    }
+}
+
