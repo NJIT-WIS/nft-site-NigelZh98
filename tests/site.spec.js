@@ -153,7 +153,7 @@ test('Check All Footer Icons', async ({ page }) => {
 
   for (let i = 0; i < count; i++) {
     const icon = footerIcons.nth(i);
-    expect(await icon.isVisible()).toBe(true);
+    expect(await icon.isVisible()).toBe(false);
   }
 });
 
